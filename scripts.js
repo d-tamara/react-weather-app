@@ -1,6 +1,6 @@
 const btn = document.getElementById('question-1');
 
-btn.addEventListener('click', function onClick() {
+btn.addEventListener('click', function changeColor() {
     btn.style.backgroundColor = 'salmon';
     btn.style.color = 'white';
 });
