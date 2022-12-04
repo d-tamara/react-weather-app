@@ -13,23 +13,31 @@ fetch('Data/questions.json')
 console.log(obj);*/
 
 
-async function fetchExam() {
+async function fetchQuestions() {
 
     const response = await fetch(('Data/questions.json'), {
         method: 'GET',
 
     });
-    const exam = await response.json();
-    return exam;
+    const questions = await response.json();
+    return questions;
 
 }
 
-async function renderExam() {
-    const exam = await fetchExam();
-    console.log(exam);
+async function renderQuestions() {
+    const questions = await fetchQuestions();
+    console.log(questions);
 }
 
-renderExam();
+async function renderQuestions2() {
+    const questions = await fetchQuestions();
+    console.log(questions.firstQuestion);
+}
+
+
+
+renderQuestions();
+renderQuestions2();
 
 
 let question1 = document.getElementById('question-1');
