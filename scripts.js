@@ -17,14 +17,12 @@ window.onload = function () {
 
     async function renderQuestions(id) {
         const questions = await fetchQuestions();
-        console.log(questions);
+        //console.log(questions);
         let firstPair = questions[id];
         document.getElementById('question-1-text').innerHTML = firstPair.firstQuestion;
         document.getElementById('question-2-text').innerHTML = firstPair.secondQuestion;
         firstAnswerSelected = firstPair.firstAnswerSelected;
         secondAnswerSelected = firstPair.secondAnswerSelected;
-        console.log(firstAnswerSelected);
-        console.log(secondAnswerSelected);
         allAnswers = firstAnswerSelected + secondAnswerSelected;
     }
 
@@ -46,6 +44,7 @@ window.onload = function () {
             allAnswers++;
             document.getElementById('percentage-1').innerHTML = toPercentage(firstAnswerSelected, allAnswers);
             document.getElementById('percentage-2').innerHTML = toPercentage(secondAnswerSelected, allAnswers);
+            updateAnswer1();
         }
     });
 
@@ -59,7 +58,8 @@ window.onload = function () {
             secondAnswerSelected++;
             allAnswers++;
             document.getElementById('percentage-1').innerHTML = toPercentage(firstAnswerSelected, allAnswers);
-            document.getElementById('percentage-2').innerHTML = toPercentage(secondAnswerSelected, allAnswers);;
+            document.getElementById('percentage-2').innerHTML = toPercentage(secondAnswerSelected, allAnswers);
+            updateAnswer2();
         }
     });
 
@@ -82,4 +82,14 @@ window.onload = function () {
 function toPercentage(thisAnswerCounter, allAnswersCounter) {
     let percentage = (thisAnswerCounter/allAnswersCounter) * 100;
     return Math.trunc(percentage.toString()) + '%';
+}
+
+async function updateAnswer1(id) {
+    const questions = await fetchQuestions();
+    questions[id].firstAnswerSelected += 1;
+    console.log(questions[id].firstAnswerSelected );
+}
+async function updateAnswer2(id) {
+    const questions = await fetchQuestions();
+    questions[id].secondAnswerSelected += 1;
 }
