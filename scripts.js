@@ -2,8 +2,6 @@ function changeColor() {
     alert('test');
 }
 
-import data from '/Data/questions.json' assert { type: 'json' };
-console.log(data);
-
-
-console.log(data.firstQuestion);
+fetch('/Data/questions.json')
+    .then((response) => response.json())
+    .then((json) => console.log(json));
