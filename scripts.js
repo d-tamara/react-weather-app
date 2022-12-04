@@ -85,9 +85,6 @@ window.onload = function () {
         else {
             fetch('Data/questions.json', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
                 body: JSON.stringify(questions),
             })
                 .then((response) => response.json())
@@ -95,7 +92,6 @@ window.onload = function () {
                     console.log('Success:', questions);
                 });
         }
-
 
 
     });
