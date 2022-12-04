@@ -25,7 +25,9 @@ async function fetchQuestions() {
 async function renderQuestions() {
     const questions = await fetchQuestions();
     console.log(questions);
-    console.log(questions.length);
+    //console.log(questions.length);
+    
+    questions.forEach(element => console.log(element));
 }
 /*
 async function renderQuestions2() {
