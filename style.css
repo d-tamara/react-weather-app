@@ -12,6 +12,9 @@
   width: 400px;
   height: 200px;
   border: 2px solid #003366;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .selected {

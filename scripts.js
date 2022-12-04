@@ -15,6 +15,7 @@ window.onload = function () {
     let secondAnswerSelected = 0;
     let allAnswers = 0;
 
+
     async function renderQuestions(id) {
         const questions = await fetchQuestions();
         //console.log(questions);
@@ -44,7 +45,6 @@ window.onload = function () {
             allAnswers++;
             document.getElementById('percentage-1').innerHTML = toPercentage(firstAnswerSelected, allAnswers);
             document.getElementById('percentage-2').innerHTML = toPercentage(secondAnswerSelected, allAnswers);
-            updateAnswer1();
         }
     });
 
@@ -59,7 +59,6 @@ window.onload = function () {
             allAnswers++;
             document.getElementById('percentage-1').innerHTML = toPercentage(firstAnswerSelected, allAnswers);
             document.getElementById('percentage-2').innerHTML = toPercentage(secondAnswerSelected, allAnswers);
-            updateAnswer2();
         }
     });
 
@@ -84,12 +83,3 @@ function toPercentage(thisAnswerCounter, allAnswersCounter) {
     return Math.trunc(percentage.toString()) + '%';
 }
 
-async function updateAnswer1(id) {
-    const questions = await fetchQuestions();
-    questions[id].firstAnswerSelected += 1;
-    console.log(questions[id].firstAnswerSelected );
-}
-async function updateAnswer2(id) {
-    const questions = await fetchQuestions();
-    questions[id].secondAnswerSelected += 1;
-}
