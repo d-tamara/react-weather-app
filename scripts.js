@@ -4,6 +4,7 @@ function changeColor() {
 
 fetch('Data/questions.json')
     .then((response) => response.json())
-    .then((questions) => console.log(questions.firstQuestion));
+    .then((questions) => console.log(questions))
+.then((questions) => console.log(questions[1]));
 
 
