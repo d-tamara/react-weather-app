@@ -37,16 +37,16 @@ renderQuestions();
 
 window.onload = function () {
 
-    const buttonNextQuestion = document.getElementById('nextQuestion');
-    document.getElementById('nextQuestion').classList.add('hide-this');
+    //const buttonNextQuestion = document.getElementById('nextQuestion');
+    //document.getElementById('nextQuestion').classList.add('hide-this');
 
     document.getElementById('question-1').addEventListener('click', function () {
         this.classList.add('selected');
-        buttonNextQuestion.classList.remove('hide-this');
+        //buttonNextQuestion.classList.remove('hide-this');
     });
     document.getElementById('question-2').addEventListener('click', function () {
         this.classList.add('selected');
-        buttonNextQuestion.classList.remove('hide-this');
+        //buttonNextQuestion.classList.remove('hide-this');
     });
 
 
