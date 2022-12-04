@@ -23,6 +23,8 @@ window.onload = function () {
         document.getElementById('question-2').innerHTML += firstPair.secondQuestion;
         firstAnswerSelected = firstPair.firstAnswerSelected;
         secondAnswerSelected = firstPair.secondAnswerSelected;
+        console.log(firstAnswerSelected);
+        console.log(secondAnswerSelected);
         allAnswers = firstAnswerSelected + secondAnswerSelected;
     }
 
@@ -42,8 +44,8 @@ window.onload = function () {
             isSelected = true;
             firstAnswerSelected++;
             allAnswers++;
-            document.getElementById('percentage-1').innerHTML += toPercentage(firstAnswerSelected, allAnswers);
-            document.getElementById('percentage-2').innerHTML += toPercentage(secondAnswerSelected, allAnswers);;
+            document.getElementById('percentage-1').innerHTML = toPercentage(firstAnswerSelected, allAnswers);
+            document.getElementById('percentage-2').innerHTML = toPercentage(secondAnswerSelected, allAnswers);;
         }
     });
 
@@ -56,8 +58,8 @@ window.onload = function () {
             isSelected = true;
             secondAnswerSelected++;
             allAnswers++;
-            document.getElementById('percentage-1').innerHTML += toPercentage(firstAnswerSelected, allAnswers);
-            document.getElementById('percentage-2').innerHTML += toPercentage(secondAnswerSelected, allAnswers);;
+            document.getElementById('percentage-1').innerHTML = toPercentage(firstAnswerSelected, allAnswers);
+            document.getElementById('percentage-2').innerHTML = toPercentage(secondAnswerSelected, allAnswers);;
         }
     });
 
