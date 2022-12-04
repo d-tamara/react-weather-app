@@ -1,13 +1,9 @@
-let question1 = document.getElementById('question-1');
-let question2 = document.getElementById('question-2');
+const btn = document.getElementById('question-1');
 
-question1.onclick = changeColor;
-question2.onclick = changeColor;
-
-function changeColor() {
-    document.body.style.backgroundColor = "purple";
-    return false;
-}
+btn.addEventListener('click', function onClick() {
+    btn.style.backgroundColor = 'salmon';
+    btn.style.color = 'white';
+});
 
 
 
