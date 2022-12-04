@@ -17,11 +17,9 @@ async function fetchQuestions() {
 
     const response = await fetch(('Data/questions.json'), {
         method: 'GET',
-
     });
     const questions = await response.json();
     return questions;
-
 }
 
 async function renderQuestions() {
@@ -31,23 +29,21 @@ async function renderQuestions() {
 
 async function renderQuestions2() {
     const questions = await fetchQuestions();
-    console.log(questions.firstQuestion);
+    console.log(questions[0][1]);
 }
-
-
 
 renderQuestions();
 renderQuestions2();
 
 
-let question1 = document.getElementById('question-1');
+/*let question1 = document.getElementById('question-1');
 let question2 = document.getElementById('question-2');
 if (question1) {
     question1.addEventListener('click', () => question1.style.backgroundColor = '#3399ff')
 }
 if (question2) {
     question2.addEventListener('click', () => question2.style.backgroundColor = '#3399ff')
-}
+}*/
 
 
 
