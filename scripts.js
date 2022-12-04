@@ -2,10 +2,10 @@ window.onload = function () {
 
     async function fetchQuestions() {
 
-        const response = await fetch(('https://api.jsonbin.io/v3/b/63847bc2a3c728450ed954c1'), {
+        const response = await fetch(('https://api.jsonbin.io/v3/b/63847bc2a3c728450ed954c1/meta/privacy'), {
             method: 'GET',
             headers: {
-                'X-Master-Key': '$2b$10$cwaQJ/5tvKVQ7qtRl/jNPOaDwhRdayBU4ENJ0Pyix3wwUhOirs0Yy/meta/privacy ',
+                'X-Master-Key': '$2b$10$cwaQJ/5tvKVQ7qtRl/jNPOaDwhRdayBU4ENJ0Pyix3wwUhOirs0Yy',
                 'X-Bin-Private': 'false'
             },
         });
@@ -87,10 +87,10 @@ window.onload = function () {
             renderQuestions(id);
         }
         else {
-            fetch('https://api.jsonbin.io/v3/b/63847bc2a3c728450ed954c1', {
+            fetch('https://api.jsonbin.io/v3/b/63847bc2a3c728450ed954c1/meta/privacy', {
                 method: 'POST',
                 headers: {
-                    'X-Master-Key': '$2b$10$cwaQJ/5tvKVQ7qtRl/jNPOaDwhRdayBU4ENJ0Pyix3wwUhOirs0Yy/meta/privacy ',
+                    'X-Master-Key': '$2b$10$cwaQJ/5tvKVQ7qtRl/jNPOaDwhRdayBU4ENJ0Pyix3wwUhOirs0Yy',
                     'X-Bin-Private': 'false'
                 },
                 body: JSON.stringify(questions),
