@@ -9,10 +9,15 @@ window.onload = function () {
         return questions;
     }
 
-    async function renderQuestions() {
+
+
+
+    let id = 0;
+
+    async function renderQuestions(id) {
         const questions = await fetchQuestions();
         console.log(questions);
-        let firstPair = questions[0];
+        let firstPair = questions[id];
         document.getElementById('question-1').innerHTML += firstPair.firstQuestion;
         document.getElementById('question-2').innerHTML += firstPair.secondQuestion;
 
@@ -25,12 +30,13 @@ window.onload = function () {
 
     }
 
-    renderQuestions();
+    renderQuestions(id);
 
 
 
 
     let isSelected = false;
+
 
     var buttonNextQuestion = document.getElementById('nextQuestion');
     buttonNextQuestion.classList.add('hide-element');
@@ -52,6 +58,15 @@ window.onload = function () {
             buttonNextQuestion.classList.add('show-element');
             isSelected = true;
         }
+    });
+
+
+    document.getElementById('nextQuestion').addEventListener('click', function () {
+        this.classList.remove('show-element');
+        this.classList.add('hide-element');
+        isSelected = false;
+        id++;
+        renderQuestions(id);
     });
 
 };
