@@ -29,7 +29,8 @@ async function renderQuestions() {
 
 async function renderQuestions2() {
     const questions = await fetchQuestions();
-   console.log(questions.find(x => x.id === '1').foo);
+    let set1 = questions.find(q => q.id === "1");
+    console.log(set1);
 
 }
 
