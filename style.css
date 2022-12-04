@@ -4,6 +4,7 @@
   max-width: 1200px;
   display: flex;
   gap: 32px;
+  justify-content: center;
 }
 
 .question-1, .question-2 {
