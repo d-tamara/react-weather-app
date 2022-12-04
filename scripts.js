@@ -1,10 +1,8 @@
-const btn = document.getElementById('question-1');
+const question = document.querySelector('.question');
 
-btn.addEventListener('click', function changeColor() {
-    btn.style.backgroundColor = 'salmon';
-    btn.style.color = 'white';
-});
-
+question.addEventListener('click', function() {
+    this.style.backgroundColor = "red";
+})
 
 
     fetch('Data/questions.json')
