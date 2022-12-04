@@ -28,18 +28,30 @@ window.onload = function () {
     renderQuestions();
 
 
+
+
+    let isSelected = false;
+
     var buttonNextQuestion = document.getElementById('nextQuestion');
     buttonNextQuestion.classList.add('hide-element');
 
     document.getElementById('question-1').addEventListener('click', function () {
-        this.classList.add('selected');
-        buttonNextQuestion.classList.remove('hide-element');
-        buttonNextQuestion.classList.add('show-element');
+        if(!isSelected) {
+            this.classList.add('selected');
+            buttonNextQuestion.classList.remove('hide-element');
+            buttonNextQuestion.classList.add('show-element');
+            isSelected = true;
+        }
     });
+
+
     document.getElementById('question-2').addEventListener('click', function () {
-        this.classList.add('selected');
-        buttonNextQuestion.classList.remove('hide-element');
-        buttonNextQuestion.classList.add('show-element');
+        if(!isSelected) {
+            this.classList.add('selected');
+            buttonNextQuestion.classList.remove('hide-element');
+            buttonNextQuestion.classList.add('show-element');
+            isSelected = true;
+        }
     });
 
 };
