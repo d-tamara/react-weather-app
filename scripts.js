@@ -66,6 +66,8 @@ window.onload = function () {
         this.classList.add('hide-element');
         isSelected = false;
         id++;
+        document.getElementById('question-1').innerHTML = '';
+        document.getElementById('question-2').innerHTML = '';
         renderQuestions(id);
     });
 
