@@ -15,7 +15,7 @@ window.onload = function () {
 
         questions.forEach(element => console.log(element));
 
-        questions.forEach(element => document.getElementById('question-1').innerHTML += this.element.firstQuestion);
+        questions.forEach(element => document.getElementById('question-1').innerHTML += element.firstQuestion);
 
 
 
