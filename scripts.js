@@ -19,8 +19,8 @@ window.onload = function () {
         const questions = await fetchQuestions();
         console.log(questions);
         let firstPair = questions[id];
-        document.getElementById('question-1').innerHTML += firstPair.firstQuestion;
-        document.getElementById('question-2').innerHTML += firstPair.secondQuestion;
+        document.getElementById('question-1-text').innerHTML = firstPair.firstQuestion;
+        document.getElementById('question-2-text').innerHTML = firstPair.secondQuestion;
         firstAnswerSelected = firstPair.firstAnswerSelected;
         secondAnswerSelected = firstPair.secondAnswerSelected;
         console.log(firstAnswerSelected);
@@ -45,7 +45,7 @@ window.onload = function () {
             firstAnswerSelected++;
             allAnswers++;
             document.getElementById('percentage-1').innerHTML = toPercentage(firstAnswerSelected, allAnswers);
-            document.getElementById('percentage-2').innerHTML = toPercentage(secondAnswerSelected, allAnswers);;
+            document.getElementById('percentage-2').innerHTML = toPercentage(secondAnswerSelected, allAnswers);
         }
     });
 
@@ -69,8 +69,9 @@ window.onload = function () {
         this.classList.add('hide-element');
         isSelected = false;
         id++;
-        document.getElementById('question-1').innerHTML = '';
-        document.getElementById('question-2').innerHTML = '';
+        //document.getElementById('question-1').innerHTML = '';
+        //document.getElementById('question-2').innerHTML = '';
+
         document.getElementById('question-1').classList.remove('selected');
         document.getElementById('question-2').classList.remove('selected');
         renderQuestions(id);
