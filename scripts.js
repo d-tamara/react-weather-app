@@ -2,7 +2,7 @@ window.onload = function () {
 
     async function fetchQuestions() {
 
-        const response = await fetch(('https://api.jsonbin.io/v3/b/63847bc2a3c728450ed954c1/meta/privacy'), {
+        const response = await fetch(('https://api.jsonbin.io/v3/b/63847bc2a3c728450ed954c1'), {
             method: 'GET',
             headers: {
                 'X-Master-Key': '$2b$10$cwaQJ/5tvKVQ7qtRl/jNPOaDwhRdayBU4ENJ0Pyix3wwUhOirs0Yy',
@@ -87,7 +87,7 @@ window.onload = function () {
             renderQuestions(id);
         }
         else {
-            fetch('https://api.jsonbin.io/v3/b/63847bc2a3c728450ed954c1/meta/privacy', {
+            fetch('https://api.jsonbin.io/v3/b/63847bc2a3c728450ed954c1', {
                 method: 'POST',
                 headers: {
                     'X-Master-Key': '$2b$10$cwaQJ/5tvKVQ7qtRl/jNPOaDwhRdayBU4ENJ0Pyix3wwUhOirs0Yy',
