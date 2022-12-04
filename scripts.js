@@ -13,20 +13,15 @@ fetch('Data/questions.json')
 console.log(obj);*/
 
 
-
-
-
 async function fetchExam() {
-    try {
-        const response = await fetch(`('Data/questions.json')`, {
-            method: 'GET',
 
-        });
-        const exam = await response.json();
-        return exam;
-    } catch (error) {
-        console.error(error);
-    }
+    const response = await fetch(('Data/questions.json'), {
+        method: 'GET',
+
+    });
+    const exam = await response.json();
+    return exam;
+
 }
 
 async function renderExam() {
@@ -37,19 +32,13 @@ async function renderExam() {
 renderExam();
 
 
-
-
-
-
-
-
 let question1 = document.getElementById('question-1');
 let question2 = document.getElementById('question-2');
-if(question1) {
-    question1.addEventListener('click', () => question1.style.backgroundColor='#3399ff')
+if (question1) {
+    question1.addEventListener('click', () => question1.style.backgroundColor = '#3399ff')
 }
-if(question2) {
-    question2.addEventListener('click', () => question2.style.backgroundColor='#3399ff')
+if (question2) {
+    question2.addEventListener('click', () => question2.style.backgroundColor = '#3399ff')
 }
 
 
