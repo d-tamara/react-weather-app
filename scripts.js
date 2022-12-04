@@ -10,8 +10,8 @@ window.onload = function () {
             },
         });
         const questions = await response.json();
-        console.log(questions);
-        return questions;
+        console.log(questions.record);
+        return questions.record;
     }
 
 
