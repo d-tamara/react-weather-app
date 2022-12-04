@@ -37,13 +37,16 @@ renderQuestions();
 
 window.onload = function () {
 
-    let buttonNextQuestion = document.getElementById('question-1').classList.add('hide-this');
+    let buttonNextQuestion = document.getElementById('nextQuestion');
+    buttonNextQuestion.classList.add('hide-this')
 
     document.getElementById('question-1').addEventListener('click', function () {
-            this.classList.add('selected');
+        this.classList.add('selected');
+        buttonNextQuestion.classList.remove('hide-this');
     });
     document.getElementById('question-2').addEventListener('click', function () {
         this.classList.add('selected');
+        buttonNextQuestion.classList.remove('hide-this');
     });
 
 
