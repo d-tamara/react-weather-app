@@ -5,7 +5,7 @@ fetch('Data/questions.json')
     })
 
 
-console.log(data);
+console.log(obj);
 
 
 
