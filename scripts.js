@@ -12,14 +12,16 @@ window.onload = function () {
     async function renderQuestions() {
         const questions = await fetchQuestions();
         console.log(questions);
-        console.log(questions[0]);
+        let firstPair = questions[0];
+        document.getElementById('question-1').innerHTML += firstPair.firstQuestion;
+        document.getElementById('question-2').innerHTML += firstPair.secondQuestion;
 
         //questions.forEach(element => console.log(element));
 
         //console.log(questions.find(x => x.id ==='0'));
 
-        questions.forEach(element => document.getElementById('question-1').innerHTML += element.firstQuestion);
-        questions.forEach(element => document.getElementById('question-2').innerHTML += element.secondQuestion);
+        //questions.forEach(element => document.getElementById('question-1').innerHTML += element.firstQuestion);
+        //questions.forEach(element => document.getElementById('question-2').innerHTML += element.secondQuestion);
 
     }
 
