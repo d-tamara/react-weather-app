@@ -2,6 +2,6 @@ function changeColor() {
     alert('test');
 }
 
-fetch('./data.json')
+fetch('/Data/questions.json')
     .then((response) => response.json())
     .then((json) => console.log(json));
