@@ -38,7 +38,7 @@ renderQuestions();
 window.onload = function () {
 
     let buttonNextQuestion = document.getElementById('nextQuestion');
-    buttonNextQuestion.classList.add('hide-this')
+    buttonNextQuestion.classList.add('hide-this');
 
     document.getElementById('question-1').addEventListener('click', function () {
         this.classList.add('selected');
