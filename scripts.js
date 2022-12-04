@@ -81,10 +81,5 @@ window.onload = function () {
 
 function toPercentage(thisAnswerCounter, allAnswersCounter) {
     let percentage = (thisAnswerCounter/allAnswersCounter) * 100;
-    return percentage.toString() + '%';
+    return Math.trunc(percentage.toString()) + '%';
 }
-
-
-
-
-
