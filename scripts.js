@@ -1,6 +1,17 @@
 fetch('Data/questions.json')
     .then((response) => response.json())
-    .then((questions) => console.log(questions));
+    .then(data => {
+        obj = data;
+    })
+
+
+console.log(data);
+
+
+
+
+
+
 
 
 let question1 = document.getElementById('question-1');
