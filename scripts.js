@@ -89,6 +89,7 @@ window.onload = function () {
             renderQuestions(id);
         }
         else {
+            console.log('a prideva v else');
             fetch('https://api.jsonbin.io/v3/b/63847bc2a3c728450ed954c1', {
                 method: 'POST',
                 headers: {
