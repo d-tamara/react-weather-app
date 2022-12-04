@@ -10,6 +10,7 @@ window.onload = function () {
             },
         });
         const questions = await response.json();
+        console.log(questions);
         return questions;
     }
 
@@ -22,6 +23,7 @@ window.onload = function () {
     let questions = [];
 
     async function renderQuestions(id) {
+        console.log(questions.length);
         if(questions.length == 0) {
             questions = await fetchQuestions();
         }
