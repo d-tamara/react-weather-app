@@ -14,15 +14,16 @@ window.onload = function () {
         console.log(questions);
 
         questions.forEach(element => console.log(element));
+        questions.forEach(element => console.log(element[0]));
+
+
 
         questions.forEach(element => document.getElementById('question-1').innerHTML += element.firstQuestion);
-
-
+        questions.forEach(element => document.getElementById('question-2').innerHTML += element.secondQuestion);
 
     }
 
     renderQuestions();
-
 
 
     var buttonNextQuestion = document.getElementById('nextQuestion');
