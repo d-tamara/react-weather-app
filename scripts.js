@@ -28,7 +28,7 @@ async function renderQuestions() {
 
     questions.forEach(element => console.log(element));
 
-    questions.forEach(element => alert(element.firstQuestion, element.secondQuestion));
+    questions.forEach(element => console.log(element.firstQuestion, element.secondQuestion));
 
 
 }
@@ -38,14 +38,15 @@ renderQuestions();
 
 
 
-/*let question1 = document.getElementById('question-1');
+let question1 = document.getElementById('question-1');
 let question2 = document.getElementById('question-2');
 if (question1) {
+    alert('test');
     question1.addEventListener('click', () => question1.style.backgroundColor = '#3399ff')
 }
 if (question2) {
     question2.addEventListener('click', () => question2.style.backgroundColor = '#3399ff')
-}*/
+}
 
 
 
