@@ -11,11 +11,11 @@
 .question {
   width: 400px;
   height: 200px;
-  border: 2px solid red;
+  border: 2px solid #003366;
 }
 
 .selected {
-  background-color: #3399ff;
+  background-color: #004c99;
 }
 
 .show-element {
