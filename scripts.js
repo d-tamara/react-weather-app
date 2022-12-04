@@ -76,6 +76,7 @@ window.onload = function () {
 
 
     document.getElementById('nextQuestion').addEventListener('click', function () {
+        console.log(questions.length);
         if(id < questions.length) {
             this.classList.remove('show-element');
             this.classList.add('hide-element');
