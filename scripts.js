@@ -28,11 +28,14 @@ async function renderQuestions() {
 
     questions.forEach(element => console.log(element));
 
-    questions.forEach(element => console.log(element.firstQuestion), element => console.log(element.secondQuestion));
+    questions.forEach(element => console.log(element.firstQuestion, element.secondQuestion));
+
 
 }
 
+
 renderQuestions();
+
 
 
 /*let question1 = document.getElementById('question-1');
