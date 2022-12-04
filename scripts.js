@@ -1,8 +1,9 @@
-// First we detect the click event
-document.getElementsByClassName('question').addEventListener('click', function () {
-        this.classList.add('selected');
-});
+document.getElementById('test').onclick = changeColor;
 
+function changeColor() {
+    document.body.style.color = "purple";
+    return false;
+}
 
 
 
