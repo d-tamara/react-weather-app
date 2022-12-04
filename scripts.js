@@ -4,6 +4,9 @@ window.onload = function () {
 
         const response = await fetch(('https://api.jsonbin.io/v3/b/63847bc2a3c728450ed954c1'), {
             method: 'GET',
+            headers: {
+                'X-Master-Key': '$2b$10$cwaQJ/5tvKVQ7qtRl/jNPOaDwhRdayBU4ENJ0Pyix3wwUhOirs0Yy'
+            },
         });
         const questions = await response.json();
         return questions;
@@ -85,6 +88,9 @@ window.onload = function () {
         else {
             fetch('https://api.jsonbin.io/v3/b/63847bc2a3c728450ed954c1', {
                 method: 'POST',
+                headers: {
+                    'X-Master-Key': '$2b$10$cwaQJ/5tvKVQ7qtRl/jNPOaDwhRdayBU4ENJ0Pyix3wwUhOirs0Yy'
+                },
                 body: JSON.stringify(questions),
             })
                 .then((response) => response.json())
