@@ -5,6 +5,9 @@ fetch('Data/questions.json')
     .then(data => {
         obj = data;
     })
+    .then(() => {
+        console.log(obj);
+    });
 
 
 console.log(obj);
