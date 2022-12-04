@@ -10,9 +10,10 @@ window.onload = function () {
     }
 
 
-
-
     let id = 0;
+    let firstAnswerSelected = 0;
+    let secondAnswerSelected = 0;
+    let allAnswers = 0;
 
     async function renderQuestions(id) {
         const questions = await fetchQuestions();
@@ -20,23 +21,15 @@ window.onload = function () {
         let firstPair = questions[id];
         document.getElementById('question-1').innerHTML += firstPair.firstQuestion;
         document.getElementById('question-2').innerHTML += firstPair.secondQuestion;
-
-        //questions.forEach(element => console.log(element));
-
-        //console.log(questions.find(x => x.id ==='0'));
-
-        //questions.forEach(element => document.getElementById('question-1').innerHTML += element.firstQuestion);
-        //questions.forEach(element => document.getElementById('question-2').innerHTML += element.secondQuestion);
-
+        firstAnswerSelected = firstPair.firstAnswerSelected;
+        secondAnswerSelected = firstPair.secondAnswerSelected;
+        allAnswers = firstAnswerSelected + secondAnswerSelected;
     }
 
     renderQuestions(id);
 
 
-
-
     let isSelected = false;
-
 
     var buttonNextQuestion = document.getElementById('nextQuestion');
     buttonNextQuestion.classList.add('hide-element');
@@ -47,6 +40,10 @@ window.onload = function () {
             buttonNextQuestion.classList.remove('hide-element');
             buttonNextQuestion.classList.add('show-element');
             isSelected = true;
+            firstAnswerSelected++;
+            allAnswers++;
+            document.getElementById('percentage-1').innerHTML += toPercentage(firstAnswerSelected, allAnswers);
+            document.getElementById('percentage-2').innerHTML += toPercentage(secondAnswerSelected, allAnswers);;
         }
     });
 
@@ -57,6 +54,10 @@ window.onload = function () {
             buttonNextQuestion.classList.remove('hide-element');
             buttonNextQuestion.classList.add('show-element');
             isSelected = true;
+            secondAnswerSelected++;
+            allAnswers++;
+            document.getElementById('percentage-1').innerHTML += toPercentage(firstAnswerSelected, allAnswers);
+            document.getElementById('percentage-2').innerHTML += toPercentage(secondAnswerSelected, allAnswers);;
         }
     });
 
@@ -72,8 +73,14 @@ window.onload = function () {
         document.getElementById('question-2').classList.remove('selected');
         renderQuestions(id);
     });
-
 };
+
+
+function toPercentage(allAnswersCounter, thisAnswerCounter) {
+    let percentage = (thisAnswerCounter/allAnswersCounter) * 100;
+    return percentage.toString() + '%';
+}
+
 
 
 
