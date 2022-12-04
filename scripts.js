@@ -15,9 +15,10 @@ window.onload = function () {
     let secondAnswerSelected = 0;
     let allAnswers = 0;
 
+    let questions = [];
 
     async function renderQuestions(id) {
-        const questions = await fetchQuestions();
+        questions = await fetchQuestions();
         //console.log(questions);
         let firstPair = questions[id];
         document.getElementById('question-1-text').innerHTML = firstPair.firstQuestion;
@@ -25,11 +26,6 @@ window.onload = function () {
         firstAnswerSelected = firstPair.firstAnswerSelected;
         secondAnswerSelected = firstPair.secondAnswerSelected;
         allAnswers = firstAnswerSelected + secondAnswerSelected;
-    }
-
-    async function updateAnswers(id) {
-        const questions = await fetchQuestions();
-        questions[id].first
     }
 
     renderQuestions(id);
@@ -50,6 +46,8 @@ window.onload = function () {
             allAnswers++;
             document.getElementById('percentage-1').innerHTML = toPercentage(firstAnswerSelected, allAnswers);
             document.getElementById('percentage-2').innerHTML = toPercentage(secondAnswerSelected, allAnswers);
+            questions[id].firstAnswerSelected += 1;
+            console.log(questions[id].firstAnswerSelected);
         }
     });
 
@@ -64,6 +62,7 @@ window.onload = function () {
             allAnswers++;
             document.getElementById('percentage-1').innerHTML = toPercentage(firstAnswerSelected, allAnswers);
             document.getElementById('percentage-2').innerHTML = toPercentage(secondAnswerSelected, allAnswers);
+            questions[id].secondAnswerSelected += 1;
         }
     });
 
