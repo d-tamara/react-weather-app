@@ -11,11 +11,12 @@ window.onload = function () {
 
     async function renderQuestions() {
         const questions = await fetchQuestions();
-        //console.log(questions);
+        console.log(questions);
+        console.log(questions[0]);
 
         //questions.forEach(element => console.log(element));
 
-        console.log(questions.find(x => x.id ==='0'));
+        //console.log(questions.find(x => x.id ==='0'));
 
         questions.forEach(element => document.getElementById('question-1').innerHTML += element.firstQuestion);
         questions.forEach(element => document.getElementById('question-2').innerHTML += element.secondQuestion);
