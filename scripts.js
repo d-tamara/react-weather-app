@@ -21,7 +21,7 @@ window.onload = function () {
     let questions = [];
 
     async function renderQuestions(id) {
-        if(questions.length == 0) {
+        if(questions == []) {
             questions = await fetchQuestions();
         }
 
