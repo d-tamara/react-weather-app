@@ -14,6 +14,22 @@ window.onload = function () {
         return questions.record;
     }
 
+    async function updateAnswers() {
+
+        await fetch(('https://api.jsonbin.io/v3/b/63847bc2a3c728450ed954c1'), {
+            method: 'POST',
+            headers: {
+                'X-Master-Key': '$2b$10$cwaQJ/5tvKVQ7qtRl/jNPOaDwhRdayBU4ENJ0Pyix3wwUhOirs0Yy',
+                'X-Bin-Private': 'false'
+            },
+            body: JSON.stringify(questions),
+        })
+            .then((response) => response.json())
+            .then((questions) => {
+                console.log('Success:', questions);
+            });
+    }
+
 
     let id = 0;
     let firstAnswerSelected = 0;
@@ -90,21 +106,8 @@ window.onload = function () {
             renderQuestions(id);
         }
         else {
-            console.log('a prideva v else');
-            fetch('https://api.jsonbin.io/v3/b/63847bc2a3c728450ed954c1', {
-                method: 'POST',
-                headers: {
-                    'X-Master-Key': '$2b$10$cwaQJ/5tvKVQ7qtRl/jNPOaDwhRdayBU4ENJ0Pyix3wwUhOirs0Yy',
-                    'X-Bin-Private': 'false'
-                },
-                body: JSON.stringify(questions),
-            })
-                .then((response) => response.json())
-                .then((questions) => {
-                    console.log('Success:', questions);
-                });
+            updateAnswers();
         }
-
 
     });
 };
