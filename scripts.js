@@ -37,8 +37,13 @@ renderQuestions();
 
 window.onload = function () {
 
+    let buttonNextQuestion = document.getElementById('question-1').classList.add('hide-this');
+
     document.getElementById('question-1').addEventListener('click', function () {
             this.classList.add('selected');
+    });
+    document.getElementById('question-2').addEventListener('click', function () {
+        this.classList.add('selected');
     });
 
 

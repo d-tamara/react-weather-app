@@ -5,6 +5,7 @@
   display: flex;
   gap: 32px;
   justify-content: center;
+  margin-bottom: 64px;
 }
 
 .question {
@@ -15,4 +16,8 @@
 
 .selected {
   background-color: #3399ff;
+}
+
+.hide-this {
+  display: none;
 }
