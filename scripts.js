@@ -47,7 +47,7 @@ window.onload = function () {
             document.getElementById('percentage-1').innerHTML = toPercentage(firstAnswerSelected, allAnswers);
             document.getElementById('percentage-2').innerHTML = toPercentage(secondAnswerSelected, allAnswers);
             questions[id].firstAnswerSelected += 1;
-            console.log(questions[id].firstAnswerSelected);
+
         }
     });
 
@@ -77,7 +77,9 @@ window.onload = function () {
 
         document.getElementById('question-1').classList.remove('selected');
         document.getElementById('question-2').classList.remove('selected');
-        renderQuestions(id);
+        if(id < questions.length) {
+            renderQuestions(id);
+        }
     });
 };
 
