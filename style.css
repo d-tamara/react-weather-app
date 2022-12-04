@@ -18,6 +18,10 @@
   background-color: #3399ff;
 }
 
-.hide-this {
+.show-element {
+  display: block;
+}
+
+.hide-element {
   display: none;
 }
