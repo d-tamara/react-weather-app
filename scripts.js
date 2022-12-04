@@ -25,17 +25,18 @@ async function fetchQuestions() {
 async function renderQuestions() {
     const questions = await fetchQuestions();
     console.log(questions);
+    console.log(questions.length);
 }
-
+/*
 async function renderQuestions2() {
     const questions = await fetchQuestions();
     let set1 = questions.find(q => q.id === "1");
     console.log(set1);
 
-}
+}*/
 
 renderQuestions();
-renderQuestions2();
+//renderQuestions2();
 
 
 /*let question1 = document.getElementById('question-1');
