@@ -37,10 +37,9 @@ renderQuestions();
 
 window.onload = function () {
 
-    let question1 = document.getElementById('question-1');
-    let question2 = document.getElementById('question-2');
-    question1.addEventListener('click', () => question1.classList.add('selected');
-    question2.addEventListener('click', () => question2.classList.add('selected');
+    document.getElementById('question-1').addEventListener('click', function () {
+            this.classList.add('selected');
+    });
 
 
 };
