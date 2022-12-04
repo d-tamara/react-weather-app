@@ -5,7 +5,7 @@ window.onload = function () {
         const response = await fetch(('https://api.jsonbin.io/v3/b/63847bc2a3c728450ed954c1'), {
             method: 'GET',
             headers: {
-                'X-Master-Key': '$2b$10$cwaQJ/5tvKVQ7qtRl/jNPOaDwhRdayBU4ENJ0Pyix3wwUhOirs0Yy',
+                'X-Master-Key': '$2b$10$cwaQJ/5tvKVQ7qtRl/jNPOaDwhRdayBU4ENJ0Pyix3wwUhOirs0Yy/meta/privacy ',
                 'X-Bin-Private': 'false'
             },
         });
@@ -90,7 +90,7 @@ window.onload = function () {
             fetch('https://api.jsonbin.io/v3/b/63847bc2a3c728450ed954c1', {
                 method: 'POST',
                 headers: {
-                    'X-Master-Key': '$2b$10$cwaQJ/5tvKVQ7qtRl/jNPOaDwhRdayBU4ENJ0Pyix3wwUhOirs0Yy',
+                    'X-Master-Key': '$2b$10$cwaQJ/5tvKVQ7qtRl/jNPOaDwhRdayBU4ENJ0Pyix3wwUhOirs0Yy/meta/privacy ',
                     'X-Bin-Private': 'false'
                 },
                 body: JSON.stringify(questions),
