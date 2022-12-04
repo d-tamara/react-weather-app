@@ -27,6 +27,11 @@ window.onload = function () {
         allAnswers = firstAnswerSelected + secondAnswerSelected;
     }
 
+    async function updateAnswers(id) {
+        const questions = await fetchQuestions();
+        questions[id].first
+    }
+
     renderQuestions(id);
 
 
@@ -82,4 +87,3 @@ function toPercentage(thisAnswerCounter, allAnswersCounter) {
     let percentage = (thisAnswerCounter/allAnswersCounter) * 100;
     return Math.trunc(percentage.toString()) + '%';
 }
-
