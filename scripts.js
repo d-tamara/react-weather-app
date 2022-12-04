@@ -28,20 +28,11 @@ async function renderQuestions() {
 
     questions.forEach(element => console.log(element));
 
-    questions.forEach(element => console.log(element.firstQuestion), console.log(element.secondQuestion));
-   
+    questions.forEach(element => console.log(element.firstQuestion), element => console.log(element.secondQuestion));
 
 }
-/*
-async function renderQuestions2() {
-    const questions = await fetchQuestions();
-    let set1 = questions.find(q => q.id === "1");
-    console.log(set1);
-
-}*/
 
 renderQuestions();
-//renderQuestions2();
 
 
 /*let question1 = document.getElementById('question-1');
