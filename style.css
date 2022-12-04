@@ -7,15 +7,13 @@
   justify-content: center;
 }
 
-.question-1, .question-2 {
+.question {
   width: 400px;
   height: 200px;
+  border: 1px solid #3399ff;
 }
 
-.question-1 {
-  background-color: #6dccf2;
-}
 
-.question-2 {
-  background-color: #cc2323;
+.selected {
+  background-color: #3399ff;
 }
