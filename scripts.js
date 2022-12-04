@@ -78,7 +78,7 @@ window.onload = function () {
 };
 
 
-function toPercentage(allAnswersCounter, thisAnswerCounter) {
+function toPercentage(thisAnswerCounter, allAnswersCounter) {
     let percentage = (thisAnswerCounter/allAnswersCounter) * 100;
     return percentage.toString() + '%';
 }
