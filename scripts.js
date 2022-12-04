@@ -18,8 +18,10 @@ window.onload = function () {
     let questions = [];
 
     async function renderQuestions(id) {
-        questions = await fetchQuestions();
-        //console.log(questions);
+        if(questions.length == 0) {
+            questions = await fetchQuestions();
+        }
+
         let firstPair = questions[id];
         document.getElementById('question-1-text').innerHTML = firstPair.firstQuestion;
         document.getElementById('question-2-text').innerHTML = firstPair.secondQuestion;
@@ -79,6 +81,19 @@ window.onload = function () {
         document.getElementById('question-2').classList.remove('selected');
         if(id < questions.length) {
             renderQuestions(id);
+        }
+        else {
+            fetch('Data/questions.json', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(questions),
+            })
+                .then((response) => response.json())
+                .then((questions) => {
+                    console.log('Success:', questions);
+                });
         }
     });
 };
