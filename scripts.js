@@ -19,7 +19,7 @@ function getvals(){
 
 async function main() {
     const data = await getvals(); // Waits here until getvals() is done.
-    console.log(data);
+    console.log(data.firstQuestion);
 }
 
 main();
