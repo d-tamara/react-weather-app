@@ -1,4 +1,4 @@
-let obj;
+/*let obj;
 
 fetch('Data/questions.json')
     .then((response) => response.json())
@@ -10,7 +10,31 @@ fetch('Data/questions.json')
     });
 
 
-console.log(obj);
+console.log(obj);*/
+
+
+
+
+
+async function fetchExam() {
+    try {
+        const response = await fetch(`('Data/questions.json')`, {
+            method: 'GET',
+
+        });
+        const exam = await response.json();
+        return exam;
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+async function renderExam() {
+    const exam = await fetchExam();
+    console.log(exam);
+}
+
+renderExam();
 
 
 
