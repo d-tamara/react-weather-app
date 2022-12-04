@@ -2,7 +2,7 @@ window.onload = function () {
 
     async function fetchQuestions() {
 
-        const response = await fetch(('Data/questions.json'), {
+        const response = await fetch(('https://api.jsonbin.io/v3/b/63847bc2a3c728450ed954c1'), {
             method: 'GET',
         });
         const questions = await response.json();
@@ -83,7 +83,7 @@ window.onload = function () {
             renderQuestions(id);
         }
         else {
-            fetch('Data/questions.json', {
+            fetch('https://api.jsonbin.io/v3/b/63847bc2a3c728450ed954c1', {
                 method: 'POST',
                 body: JSON.stringify(questions),
             })
