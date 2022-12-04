@@ -70,16 +70,16 @@ window.onload = function () {
 
 
     document.getElementById('nextQuestion').addEventListener('click', function () {
-        this.classList.remove('show-element');
-        this.classList.add('hide-element');
-        isSelected = false;
-        id++;
-        document.getElementById('percentage-1').innerHTML = '';
-        document.getElementById('percentage-2').innerHTML = '';
-
-        document.getElementById('question-1').classList.remove('selected');
-        document.getElementById('question-2').classList.remove('selected');
         if(id < questions.length) {
+            this.classList.remove('show-element');
+            this.classList.add('hide-element');
+            isSelected = false;
+            id++;
+            document.getElementById('percentage-1').innerHTML = '';
+            document.getElementById('percentage-2').innerHTML = '';
+
+            document.getElementById('question-1').classList.remove('selected');
+            document.getElementById('question-2').classList.remove('selected');
             renderQuestions(id);
         }
         else {
@@ -95,6 +95,9 @@ window.onload = function () {
                     console.log('Success:', questions);
                 });
         }
+
+
+
     });
 };
 
