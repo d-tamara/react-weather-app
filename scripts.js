@@ -6,7 +6,7 @@ window.onload = function () {
             method: 'GET',
             headers: {
                 'X-Master-Key': '$2b$10$cwaQJ/5tvKVQ7qtRl/jNPOaDwhRdayBU4ENJ0Pyix3wwUhOirs0Yy',
-                'X-Bin-Private': 'false'
+
             },
         });
         const questions = await response.json();
@@ -21,7 +21,7 @@ window.onload = function () {
             headers: {
                 'Content-Type': 'application/json',
                 'X-Master-Key': '$2b$10$cwaQJ/5tvKVQ7qtRl/jNPOaDwhRdayBU4ENJ0Pyix3wwUhOirs0Yy',
-                'X-Bin-Private': 'false'
+
             },
             body: JSON.stringify(questions),
         })
