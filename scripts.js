@@ -17,7 +17,7 @@ window.onload = function () {
     async function updateAnswers() {
 
         await fetch(('https://api.jsonbin.io/v3/b/63847bc2a3c728450ed954c1'), {
-            method: 'POST',
+            method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
                 'X-Master-Key': '$2b$10$cwaQJ/5tvKVQ7qtRl/jNPOaDwhRdayBU4ENJ0Pyix3wwUhOirs0Yy',
