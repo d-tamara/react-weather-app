@@ -2,10 +2,11 @@ window.onload = function () {
 
     async function fetchQuestions() {
 
-        const response = await fetch(('https://api.jsonbin.io/v3/b/63847bc2a3c728450ed954c1'), {
+        const response = await fetch(('https://api.jsonbin.io/v3/b/63847bc2a3c728450ed954c1?meta=false'), {
             method: 'GET',
             headers: {
                 'X-Master-Key': '$2b$10$cwaQJ/5tvKVQ7qtRl/jNPOaDwhRdayBU4ENJ0Pyix3wwUhOirs0Yy',
+                'X-Bin-Meta':'false'
 
             },
         });
