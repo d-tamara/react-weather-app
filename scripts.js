@@ -94,7 +94,7 @@ window.onload = function () {
 
     document.getElementById('nextQuestion').addEventListener('click', function () {
         console.log(questions.length);
-        if(id > questions.length) {
+        if(id < questions.length) {
             this.classList.remove('show-element');
             this.classList.add('hide-element');
             isSelected = false;
@@ -108,6 +108,7 @@ window.onload = function () {
         }
         else {
             updateAnswers();
+            console.log
         }
 
     });
