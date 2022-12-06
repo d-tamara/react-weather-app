@@ -110,7 +110,7 @@ window.onload = function () {
             renderQuestions(id);
         }
         else {
-            console.log('KONEC');
+            buttonNextQuestion.classList.add('hide-element');
         }
     });
 };
