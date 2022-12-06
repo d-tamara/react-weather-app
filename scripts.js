@@ -73,6 +73,8 @@ window.onload = function () {
             document.getElementById('percentage-2').innerHTML = toPercentage(secondAnswerSelected, allAnswers);
             questions[id].firstAnswerSelected += 1;
 
+            updateAnswers();
+
         }
     });
 
@@ -88,12 +90,13 @@ window.onload = function () {
             document.getElementById('percentage-1').innerHTML = toPercentage(firstAnswerSelected, allAnswers);
             document.getElementById('percentage-2').innerHTML = toPercentage(secondAnswerSelected, allAnswers);
             questions[id].secondAnswerSelected += 1;
+
+            updateAnswers();
         }
     });
 
 
     document.getElementById('nextQuestion').addEventListener('click', function () {
-        console.log(questions.length);
         if(id < questions.length) {
             this.classList.remove('show-element');
             this.classList.add('hide-element');
@@ -107,10 +110,8 @@ window.onload = function () {
             renderQuestions(id);
         }
         else {
-            updateAnswers();
-            console.log
+            console.log('KONEC');
         }
-
     });
 };
 
