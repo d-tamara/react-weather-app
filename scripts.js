@@ -64,8 +64,10 @@ window.onload = function () {
     document.getElementById('question-1').addEventListener('click', function () {
         if(!isSelected) {
             this.classList.add('selected');
-            buttonNextQuestion.classList.remove('hide-element');
-            buttonNextQuestion.classList.add('show-element');
+            if(id < questions.length - 1) {
+                buttonNextQuestion.classList.remove('hide-element');
+                buttonNextQuestion.classList.add('show-element');
+            }
             isSelected = true;
             firstAnswerSelected++;
             allAnswers++;
@@ -82,8 +84,10 @@ window.onload = function () {
     document.getElementById('question-2').addEventListener('click', function () {
         if(!isSelected) {
             this.classList.add('selected');
-            buttonNextQuestion.classList.remove('hide-element');
-            buttonNextQuestion.classList.add('show-element');
+            if(id < questions.length - 1) {
+                buttonNextQuestion.classList.remove('hide-element');
+                buttonNextQuestion.classList.add('show-element');
+            }
             isSelected = true;
             secondAnswerSelected++;
             allAnswers++;
@@ -109,10 +113,9 @@ window.onload = function () {
             document.getElementById('question-2').classList.remove('selected');
             renderQuestions(id);
         }
-        else {
-            buttonNextQuestion.classList.add('hide-element');
-        }
     });
+
+
 };
 
 
