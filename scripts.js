@@ -61,6 +61,10 @@ window.onload = function () {
     var buttonNextQuestion = document.getElementById('nextQuestion');
     buttonNextQuestion.classList.add('hide-element');
 
+    function pickAnswer(answer) {
+
+    }
+
     document.getElementById('question-1').addEventListener('click', function () {
         if(!isSelected) {
             this.classList.add('selected');
