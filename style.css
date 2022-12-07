@@ -1,6 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500;700&display=swap");
 .container {
   padding: 0 25px;
   margin: 0 auto;
@@ -8,39 +6,29 @@
   display: flex;
   gap: 32px;
   justify-content: center;
-  margin-bottom: 64px;
-}
-
-.question {
-  width: 400px;
-  height: 200px;
-  border: 2px solid #003366;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Nunito';
-  font-weight: 700;
-  color: #003366;
-}
-
-#question-1-text, #question-2-text {
-  font-size: 24px;
-}
-
-#percentage-1, #percentage-2 {
-  font-size: 32px;
-}
+  margin-bottom: 64px; }
+  .container .question {
+    width: 400px;
+    height: 200px;
+    border: 2px solid #003366;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito';
+    font-weight: 700;
+    color: #003366; }
+    .container .question #question-1-text, .container .question #question-2-text {
+      font-size: 24px; }
+    .container .question #percentage-1, .container .question #percentage-2 {
+      font-size: 32px; }
 
 .selected {
   background-color: #004c99;
-  color: white;
-}
+  color: white; }
 
 .show-element {
-  display: block;
-}
+  display: block; }
 
 .hide-element {
-  display: none;
-}
+  display: none; }
