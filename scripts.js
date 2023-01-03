@@ -9,8 +9,6 @@ window.onload = function () {
         base1.classList.add('show-element');
         base2.classList.add('hide-element');
         base2.classList.remove('show-element');
-        base1.children[0].classList.remove('selected');
-        base1.children[1].classList.remove('selected');
         document.getElementById(id1).classList.add('selected');
         document.getElementById(id2).classList.remove('selected');
     }
