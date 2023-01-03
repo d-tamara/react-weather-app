@@ -4,14 +4,13 @@ window.onload = function () {
     let backrest = document.getElementById('backrest');
     let chairImage = document.getElementById('chairImage');
 
-    function selectOption(p1, p2, id1, id2) {
-        p1.classList.remove('hide-element');
-        p1.classList.add('show-element');
-        p2.classList.add('hide-element');
-        p2.classList.remove('show-element');
-        p1.children[0].classList.remove('selected');
-        p1.children[1].classList.remove('selected');
-        chairImage.classList.add('hide-element');
+    function selectBase(base1, base2, id1, id2) {
+        base1.classList.remove('hide-element');
+        base1.classList.add('show-element');
+        base2.classList.add('hide-element');
+        base2.classList.remove('show-element');
+        base1.children[0].classList.remove('selected');
+        base1.children[1].classList.remove('selected');
         document.getElementById(id1).classList.add('selected');
         document.getElementById(id2).classList.remove('selected');
     }
@@ -24,12 +23,12 @@ window.onload = function () {
     }
 
     document.getElementById('base-1').addEventListener('click', function () {
-        selectOption(legs, backrest, 'base-1', 'base-2');
+        selectBase(legs, backrest, 'base-1', 'base-2');
         showSelected('legs-1', 'legs-2', './Data/main-a-1.png');
     });
 
     document.getElementById('base-2').addEventListener('click', function () {
-        selectOption(backrest, legs, 'base-2','base-1');
+        selectBase(backrest, legs, 'base-2','base-1');
         showSelected('backrest-1', 'backrest-2', './Data/main-b-1.png');
     });
 
