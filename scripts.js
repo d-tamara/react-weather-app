@@ -1,7 +1,7 @@
 window.onload = function () {
 
-    let podnozje1 = document.getElementById('noge');
-    let podnozje2 = document.getElementById('naslonjala');
+    let legs = document.getElementById('legs');
+    let backrest = document.getElementById('backrest');
     let chairImage = document.getElementById('chairImage');
 
     function selectOption(p1, p2, id1, id2) {
@@ -23,29 +23,29 @@ window.onload = function () {
         chairImage.src = imageID;
     }
 
-    document.getElementById('podnozje-1').addEventListener('click', function () {
-        selectOption(podnozje1, podnozje2, 'podnozje-1', 'podnozje-2');
-        showSelected('noge-1', 'noge-2', './Data/main-a-1.png');
+    document.getElementById('base-1').addEventListener('click', function () {
+        selectOption(legs, backrest, 'base-1', 'base-2');
+        showSelected('legs-1', 'legs-2', './Data/main-a-1.png');
     });
 
-    document.getElementById('podnozje-2').addEventListener('click', function () {
-        selectOption(podnozje2, podnozje1, 'podnozje-2','podnozje-1');
-        showSelected('naslonjalo-1', 'naslonjalo-2', './Data/main-b-1.png');
+    document.getElementById('base-2').addEventListener('click', function () {
+        selectOption(backrest, legs, 'base-2','base-1');
+        showSelected('backrest-1', 'backrest-2', './Data/main-b-1.png');
     });
 
-    document.getElementById('noge-1').addEventListener('click', function () {
-        showSelected('noge-1', 'noge-2', './Data/main-a-1.png');
+    document.getElementById('legs-1').addEventListener('click', function () {
+        showSelected('legs-1', 'legs-2', './Data/main-a-1.png');
     });
 
-    document.getElementById('noge-2').addEventListener('click', function () {
-        showSelected('noge-2', 'noge-1', './Data/main-a-2.png');
+    document.getElementById('legs-2').addEventListener('click', function () {
+        showSelected('legs-2', 'legs-1', './Data/main-a-2.png');
     });
 
-    document.getElementById('naslonjalo-1').addEventListener('click', function () {
-        showSelected('naslonjalo-1', 'naslonjalo-2', './Data/main-b-1.png');
+    document.getElementById('backrest-1').addEventListener('click', function () {
+        showSelected('backrest-1', 'backrest-2', './Data/main-b-1.png');
     });
 
-    document.getElementById('naslonjalo-2').addEventListener('click', function () {
-        showSelected('naslonjalo-2', 'naslonjalo-1', './Data/main-b-2.png');
+    document.getElementById('backrest-2').addEventListener('click', function () {
+        showSelected('backrest-2', 'backrest-1', './Data/main-b-2.png');
     });
 };
