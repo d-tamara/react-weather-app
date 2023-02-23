@@ -1,0 +1,54 @@
+.container {
+    padding: 0 25px;
+    margin: 100px auto;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+    justify-content: center;
+}
+
+.locationCard div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.locationCards .container {
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    background-color: #2ea44f;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 16px;
+    cursor: pointer;
+}
+
+.selectedButton {
+    background-color: #113B08;
+}
+
+.first-col, .first-row {
+    background-color: #8FBC8F;
+    width: 136px;
+    text-align: center;
+    padding: 9px 0;
+    border-radius: 6px;
+}
+
+.first-row {
+    width: 100px;
+}
+
+
+
+
